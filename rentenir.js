@@ -32,10 +32,10 @@ const dataPeminjam = [
 ]
 
 let totalBiaya = 0
-let gaji = 0
 
 for (let i = 0 ; i < dataPeminjam.length ; i ++) {
     const korban = dataPeminjam[i]
+    let gaji = 0
     if (korban.usia >= 18) {
         if (korban.pekerjaan === 'tetap') {
             gaji = korban.gajiTerakhir * 2.5
@@ -43,6 +43,7 @@ for (let i = 0 ; i < dataPeminjam.length ; i ++) {
         else {
             gaji = korban.gajiTerakhir * 1.5
         }
-        console.log(gaji);
-    }    
+        totalBiaya = totalBiaya + gaji
+    }
 }
+console.log(`Total biaya yang harus dikeluarkan adalah ${totalBiaya}`);
