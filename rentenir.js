@@ -43,7 +43,7 @@ for (let i = 0 ; i < dataPeminjam.length ; i ++) {
         else {
             gaji = korban.gajiTerakhir * 1.5
         }
-        totalBiaya = totalBiaya + gaji
+        totalBiaya += gaji
     }
 }
 console.log(`Total biaya yang harus dikeluarkan adalah ${totalBiaya}`);
